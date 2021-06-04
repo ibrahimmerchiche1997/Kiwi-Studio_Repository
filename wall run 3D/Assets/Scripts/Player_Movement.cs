@@ -120,7 +120,7 @@ public class Player_Movement : MonoBehaviour
          
             rs.Rope_Scaling_Down();
             StartCoroutine(SlowMotion());
-            Debug.Log("gg");
+           
         }
     }
 
@@ -130,7 +130,9 @@ public class Player_Movement : MonoBehaviour
         while (timescaling > 0)
         {
             Time.timeScale = 0.2f;
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(.2f);
+            Time.timeScale = 1f;
+            Debug.Log("gg");
             timescaling--;
         }
 
