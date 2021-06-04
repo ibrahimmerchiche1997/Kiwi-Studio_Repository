@@ -5,9 +5,10 @@ using DG.Tweening;
 using UnityEngine.UI;
 public class Player_Movement : MonoBehaviour
 {
-    public CharacterController character;
+    private Rigidbody playerbody;
+   // public CharacterController character;
     public RopeSystem rs;
-    public static float speed = 80;
+    public static float speed = 10;
     bool isRight, isLeft = true;
     public Animator Run;
 
@@ -15,16 +16,16 @@ public class Player_Movement : MonoBehaviour
     public Gradient gradient_Dec, gradient_Inc;
     bool DecreasingFirst = false;
 
-    Touch touch;
+    private Touch touch;
 
     public ParticleSystem SpeedEffect;
 
     private void Start()
     {
-        
+        playerbody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
 
         if (PlayingSystem.AllowToPlay)
@@ -34,25 +35,27 @@ public class Player_Movement : MonoBehaviour
                 DecreasingPower(8);
 
 
-            character.Move(transform.forward * speed * Time.deltaTime);
+           // character.Move(transform.forward * speed * Time.deltaTime);
             if (Input.touchCount > 0)
             {
                 touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Began)
+                if (touch.phase == TouchPhase.Moved)
                 {
-                    foreach (Touch touch in Input.touches)
+                    transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * 0.003f, transform.position.y + playerbody.velocity.y, transform.position.z + speed * Time.deltaTime);
+                    if (touch.deltaPosition.x < 0)
                     {
-                        if (touch.position.x < Screen.width / 2 && LeftSides())
-                        {
-                            transform.position = new Vector3(transform.position.x - 8f, transform.position.y, transform.position.z);
-                        }
-                        else if (touch.position.x > Screen.width / 2 && RightSides())
-                        {
-                            transform.position = new Vector3(transform.position.x + 8f, transform.position.y, transform.position.z);
-                        }
+                        transform.Rotate(0, -20 * Time.deltaTime, 0);
                     }
-
+                    else if (touch.deltaPosition.x > 0)
+                    {
+                        transform.Rotate(0, 20 * Time.deltaTime, 0);
+                    }
                 }
+            }
+
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + playerbody.velocity.y, transform.position.z + speed * Time.deltaTime);
+
             }
         }
 
