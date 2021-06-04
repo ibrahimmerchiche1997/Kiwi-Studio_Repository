@@ -35,7 +35,7 @@ public class Power_Extra : MonoBehaviour
     {
         if(other.gameObject.tag =="Player" || other.gameObject.tag == "Enemy")
         {
-            Power_fun(4);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
         }
     }
 
@@ -45,10 +45,7 @@ public class Power_Extra : MonoBehaviour
 
    
 
-    public void Power_fun(int i)
-    {
-
-    }
+ 
 
 
     void Get_ID(string n)
