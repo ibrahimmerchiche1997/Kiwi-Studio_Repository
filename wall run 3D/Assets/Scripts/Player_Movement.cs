@@ -117,11 +117,26 @@ public class Player_Movement : MonoBehaviour
         }
         if (other.gameObject.tag == "Obstacles")
         {
+         
             rs.Rope_Scaling_Down();
+            StartCoroutine(SlowMotion());
+           
         }
     }
 
+    IEnumerator SlowMotion()
+    {
+        int timescaling = 1;
+        while (timescaling > 0)
+        {
+            Time.timeScale = 0.2f;
+            yield return new WaitForSeconds(.2f);
+            Time.timeScale = 1f;
+            Debug.Log("gg");
+            timescaling--;
+        }
 
+    }
 
     void Speeds_Power(string n)
     {
