@@ -39,10 +39,10 @@ public class Obstacles_System : MonoBehaviour
     {
   
         if(obs.name== "Obstacles_MoverX_positive")
-            obs.DOMoveX(obs.transform.position.x - 2f, time).SetEase(Ease.InSine).SetLoops(-1, LoopType.Yoyo);
+            obs.DOMoveX(obs.transform.position.x - 3f, time).SetEase(Ease.InSine).SetLoops(-1, LoopType.Yoyo);
            
         if(obs.name== "Obstacles_MoverX_negative")
-            obs.DOMoveX(obs.transform.position.x + 2f, time).SetEase(Ease.InSine).SetLoops(-1, LoopType.Yoyo);
+            obs.DOMoveX(obs.transform.position.x + 3f, time).SetEase(Ease.InSine).SetLoops(-1, LoopType.Yoyo);
 
        
     }
