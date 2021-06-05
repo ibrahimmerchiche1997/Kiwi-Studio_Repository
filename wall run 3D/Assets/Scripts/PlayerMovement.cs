@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Obstacles_System Os;
+
+
+
     private Rigidbody playerbody;
     public float movespeed ;
     private bool IsRunning;
     private Touch touch;
-    public Animator anim;
+    //public Animator anim;
     void Start()
-    {
+    {Debug.Log("ffffff");
         playerbody = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
+     //   anim = GetComponent<Animator>();
     }
 
    
@@ -20,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.touchCount == 0)
         {
-            anim.SetFloat("Left", 1);
-            anim.SetFloat("Right", -1);
+        //    anim.SetFloat("Left", 1);
+         //   anim.SetFloat("Right", -1);
         }
         
         if (Input.touchCount > 0)
@@ -48,7 +52,52 @@ public class PlayerMovement : MonoBehaviour
 
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + playerbody.velocity.y, transform.position.z + movespeed * Time.deltaTime);
-            anim.SetBool("left",false);
+          //  anim.SetBool("left",false);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("ssszzzzz");
+        //if (other.gameObject.tag == "SpeedPower")
+        //{
+        //    Speeds_Power(other.gameObject.name);
+        //}
+        //if (other.gameObject.tag == "Finish")
+        //{
+        //    rs.Rope_Scaling_Up();
+        //}
+        if (other.gameObject.tag == "Obstacles")
+        {
+            Os.DestroyObstacle(other.transform);
+            Debug.Log("sss");
+            // rs.Rope_Scaling_Down();
+            StartCoroutine(SlowMotion());
+
+        }
+    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.collider.tag == "Obstacles")
+    //    {
+        
+
+    //        // rs.Rope_Scaling_Down();
+    //        StartCoroutine(SlowMotion());
+
+    //    }
+    //}
+    IEnumerator SlowMotion()
+    {
+        int timescaling = 1;
+        while (timescaling > 0)
+        {
+            Time.timeScale = 0.2f;
+            yield return new WaitForSeconds(.2f);
+            Time.timeScale = 1f;
+            Debug.Log("gg");
+            timescaling--;
+        }
+
+    }
+
 }
