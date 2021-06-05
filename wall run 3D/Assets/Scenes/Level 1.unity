@@ -211,7 +211,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -289,12 +289,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: -11.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.0899796, z: -7.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 543450653213050073}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1098352788
 MeshCollider:
@@ -353,7 +353,7 @@ Transform:
   - {fileID: 543450652643880825}
   - {fileID: 543450653586581967}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &305668089812124197
 GameObject:
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 305668089812124198}
   m_Layer: 0
   m_Name: Obstacles_MoverX_negative
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e57a1ea354873468f188c388ed0203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0.6
+  time: 0.3
 --- !u!65 &305668089812124199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305668089812124197}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.04066494, y: 0.005999999, z: 0.010798371}
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 305668090769437585}
   m_Layer: 0
   m_Name: Obstacles_MoverX_positive
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e57a1ea354873468f188c388ed0203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0.6
+  time: 1
 --- !u!65 &305668090769437585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -474,11 +474,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305668090769437583}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04066494, y: 0.005999999, z: 0.010798371}
-  m_Center: {x: -0.000643963, y: 0.00000008940697, z: 0.0004549398}
+  m_Size: {x: 0.0763911, y: 0.005999999, z: 0.01947079}
+  m_Center: {x: -0.01850702, y: 0.0000000893902, z: 0.004791145}
 --- !u!1 &305668090948862381
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,15 +518,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305668089812124197}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 1.5, y: -0.49557266, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: -0.49557233, z: -0.2291615}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 7801223474773440302}
   - {fileID: 491909061195575127}
   m_Father: {fileID: 543450653646367985}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 180}
 --- !u!4 &319910343779033369
 Transform:
   m_ObjectHideFlags: 0
@@ -548,15 +548,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305668090769437583}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 1.5, y: -0.49557275, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0.5, y: -0.49557275, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 7801223473549297284}
   - {fileID: 491909060271857405}
   m_Father: {fileID: 543450652422757723}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
 --- !u!4 &319910344190780287
 Transform:
   m_ObjectHideFlags: 0
@@ -948,7 +948,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148150863841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6306, y: 21.06, z: -274.16245}
+  m_LocalPosition: {x: 2.25, y: 21.06, z: -274.16245}
   m_LocalScale: {x: 0.75680864, y: 0.75680864, z: 0.75680864}
   m_Children:
   - {fileID: 3745622627476162110}
@@ -1072,13 +1072,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149540953699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1899796, z: -4.15}
+  m_LocalPosition: {x: 1.38, y: -2.92, z: 3.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4167280743746447624}
   - {fileID: 7876023681690961498}
+  - {fileID: 963194228}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &543450653586581967
 Transform:
@@ -1310,7 +1311,7 @@ GameObject:
   - component: {fileID: 543450651911740395}
   m_Layer: 0
   m_Name: Obstacles_Jumper
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1326,7 +1327,7 @@ GameObject:
   - component: {fileID: 543450651643955043}
   m_Layer: 0
   m_Name: Obstacles_Static_Cylinder
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1342,7 +1343,7 @@ GameObject:
   - component: {fileID: 543450652538629711}
   m_Layer: 0
   m_Name: Obstacles_Static_Cylinder
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1358,7 +1359,7 @@ GameObject:
   - component: {fileID: 543450652643880825}
   m_Layer: 0
   m_Name: Obstacle_Door
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1374,7 +1375,7 @@ GameObject:
   - component: {fileID: 543450652606158854}
   m_Layer: 0
   m_Name: Obstacles_Jumper
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1388,13 +1389,27 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652422757723}
+  - component: {fileID: 919132148150863842}
   m_Layer: 0
   m_Name: Obstacles_MoverX(Parent)
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &919132148150863842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148150863841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &919132148242380015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,7 +1421,7 @@ GameObject:
   - component: {fileID: 543450652497456725}
   m_Layer: 0
   m_Name: Obstacles_Static_Cylinder
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1422,7 +1437,7 @@ GameObject:
   - component: {fileID: 543450652216405279}
   m_Layer: 0
   m_Name: Obstacle_Door
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1438,7 +1453,7 @@ GameObject:
   - component: {fileID: 543450653085668051}
   m_Layer: 0
   m_Name: Obstacles_Static_Cylinder
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1470,7 +1485,7 @@ GameObject:
   - component: {fileID: 543450653646367985}
   m_Layer: 0
   m_Name: Obstacles_MoverX(Parent)
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1486,7 +1501,7 @@ GameObject:
   - component: {fileID: 543450653645463912}
   m_Layer: 0
   m_Name: Obstacles_Static_Cylinder
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1502,7 +1517,7 @@ GameObject:
   - component: {fileID: 543450653586581967}
   m_Layer: 0
   m_Name: Obstacles_Jumper
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1516,6 +1531,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450653213050073}
+  - component: {fileID: 919132149540953701}
+  - component: {fileID: 919132149540953700}
+  - component: {fileID: 919132149540953702}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1523,6 +1541,50 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!136 &919132149540953700
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149540953699}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.14897607
+  m_Height: 1.2583928
+  m_Direction: 1
+  m_Center: {x: 0.0048754066, y: 0.6459813, z: 0}
+--- !u!54 &919132149540953701
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149540953699}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
+--- !u!114 &919132149540953702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149540953699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d72afb6c1664874091ab3cd8a9d1dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Os: {fileID: 305668090769437584}
+  movespeed: 10
 --- !u!1 &993040531220886465
 GameObject:
   m_ObjectHideFlags: 0
@@ -4461,7 +4523,7 @@ GameObject:
   - component: {fileID: 6227543807275808847}
   m_Layer: 0
   m_Name: Cube_cell
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4474,7 +4536,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6227543807275808846}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.0383282, y: 0.005999999, z: 0.0198}
@@ -4539,7 +4601,7 @@ GameObject:
   - component: {fileID: 6227543808466012645}
   m_Layer: 0
   m_Name: Cube_cell
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4552,11 +4614,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6227543808466012644}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.0383282, y: 0.005999999, z: 0.0198}
-  m_Center: {x: -0.0031752954, y: 0.00000008940697, z: -0.00000022212038}
+  m_Center: {x: -0.0031753005, y: 0.00000008940697, z: -0.00000022212038}
 --- !u!1 &6227543808653932960
 GameObject:
   m_ObjectHideFlags: 0
@@ -5975,7 +6037,7 @@ GameObject:
   - component: {fileID: 8704484797805209707}
   m_Layer: 0
   m_Name: Cube_cell.002
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5988,11 +6050,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8704484797805209706}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.038326904, y: 0.005999999, z: 0.010797167}
-  m_Center: {x: -0.00011767913, y: 0.00000008940697, z: -0.0004535603}
+  m_Center: {x: -0.000117671676, y: 0.00000008940697, z: -0.0004535603}
 --- !u!1 &8704484797849901640
 GameObject:
   m_ObjectHideFlags: 0
@@ -6071,7 +6133,7 @@ GameObject:
   - component: {fileID: 8704484798994897345}
   m_Layer: 0
   m_Name: Cube_cell.002
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6084,7 +6146,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8704484798994897344}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.038326904, y: 0.005999999, z: 0.010797167}
