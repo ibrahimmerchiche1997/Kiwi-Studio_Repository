@@ -7,8 +7,8 @@ public class Player_Movement : MonoBehaviour
 {
     private Rigidbody playerbody;
    // public CharacterController character;
-    public RopeSystem rs;
-    public static float speed = 10;
+  //  public RopeSystem rs;
+    public static float speed = 5;
     bool isRight, isLeft = true;
     public Animator Run;
 
@@ -41,7 +41,7 @@ public class Player_Movement : MonoBehaviour
                 touch = Input.GetTouch(0);
                 if (touch.phase == TouchPhase.Moved)
                 {
-                    transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * 0.003f, transform.position.y + playerbody.velocity.y, transform.position.z + speed * Time.deltaTime);
+                    transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * 0.01f, transform.position.y + playerbody.velocity.y, transform.position.z + speed * Time.deltaTime);
                     if (touch.deltaPosition.x < 0)
                     {
                         transform.Rotate(0, -20 * Time.deltaTime, 0);
@@ -116,12 +116,12 @@ public class Player_Movement : MonoBehaviour
         }
         if (other.gameObject.tag == "Finish")
         {
-            rs.Rope_Scaling_Up();
+        //    rs.Rope_Scaling_Up();
         }
         if (other.gameObject.tag == "Obstacles")
         {
          
-            rs.Rope_Scaling_Down();
+         //   rs.Rope_Scaling_Down();
             StartCoroutine(SlowMotion());
            
         }
